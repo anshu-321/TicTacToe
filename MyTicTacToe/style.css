@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: coral; */
+}
+nav{
+    background-color: rgb(60, 150, 150);
+    color: burlywood;
+    height: 70px;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.3rem;
+    font-family: 'Lora',sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    /* background-color: coral; */
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Lora';
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(173, 173, 241);
+}
+
+.gameInfo{
+    padding: 0 84px;
+    font-family: 'Poetsen One',sans-serif;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset{
+    margin: 10px;
+    padding:10px 20px;
+    background-color: bisque;
+    border-radius: 10px;
+    
+}
+
+.line{
+    background-color: purple;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transform: translate(0vw, 15vw) rotate(90deg);
+    transition: width 1s ease-in-out;
+}
+
+/* Custom utility classes */
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+/* making the website responsive */
+@media screen and (max-width:800px) {
+    .gameContainer{
+        flex-wrap: wrap;
+        background-color: rgb(129, 208, 123);
+    }
+
+    .gameInfo{
+        margin-top: 40px;
+    }
+    
+    h1{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
